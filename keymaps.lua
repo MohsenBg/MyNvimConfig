@@ -25,8 +25,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -46,7 +44,7 @@ keymap("n", "<F8>", ":TagbarToggle <cr>", opts)
 keymap("n", "<F9>", ":TagbarOpen -fj <cr>", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
@@ -73,3 +71,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- saveFile and Format
+keymap("n", "<C-s>", ":w<cr>", opts)
+keymap("i", "<C-s>", "<Esc>:w<cr>", opts)
+keymap("v", "<C-s>", "<Esc>:w<cr>", opts)
