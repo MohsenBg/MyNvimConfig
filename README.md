@@ -1,5 +1,5 @@
-# MyNvimConfig
-my config neovim for myself and not lose it
+# My Neovim Config
+This is my noevim config you can use it if you want.
 
 ## Start
 I use repo blew for starter config and change it and add some plugin <br/>
