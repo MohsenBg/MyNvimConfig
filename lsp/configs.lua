@@ -5,7 +5,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "clangd", "tsserver", "rust_analyzer", "pyright", "cssls", "html" }
+local servers = { "jsonls", "sumneko_lua", "bashls", "clangd", "tsserver", "rust_analyzer", "pyright", "cssls", "html" }
 
 lsp_installer.setup({
 	ensure_installed = servers,
@@ -35,17 +35,17 @@ lspconfig.omnisharp.setup({
 	capabilities = require("user.lsp.handlers").capabilities,
 })
 
-lspconfig.asm_lsp.setup({
-	cmd = { "asm-lsp" },
-	filetypes = {
-		"asm",
-		"s",
-		"S",
-		tostring(vim.fn.getpid()),
-	},
-	on_attach = require("user.lsp.handlers").on_attach,
-	capabilities = require("user.lsp.handlers").capabilities,
-})
+-- lspconfig.asm_lsp.setup({
+-- 	cmd = { "/home/bagheri/.cargo/bin/asm-lsp" },
+-- 	filetypes = {
+-- 		"asm",
+-- 		"s",
+-- 		"S",
+-- 		tostring(vim.fn.getpid()),
+-- 	},
+-- 	on_attach = require("user.lsp.handlers").on_attach,
+-- 	capabilities = require("user.lsp.handlers").capabilities,
+-- })
 
 vim.cmd("let g:OmniSharp_highlighting = 0")
 --vim.cmd("let g:neoformat_try_node_exe = 1")
