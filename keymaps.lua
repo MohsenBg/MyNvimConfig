@@ -76,5 +76,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- saveFile and Format
 keymap("n", "<C-s>", ":w<cr>", opts)
-keymap("i", "<C-s>", "<Esc>:w<cr>", opts)
-keymap("v", "<C-s>", "<Esc>:w<cr>", opts)
+keymap("i", "<C-s>", "<Esc>:w<cr>i", opts)
+keymap("v", "<C-s>", "<Esc>:w<cr>v", opts)
