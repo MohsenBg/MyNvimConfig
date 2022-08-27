@@ -5,18 +5,26 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "bashls", "clangd", "tsserver", "rust_analyzer", "pyright", "cssls", "html" }
+local servers = { "jsonls", "sumneko_lua" }
 
 lsp_installer.setup({
 	ensure_installed = servers,
 })
+
+local installed_servers = lsp_installer.get_installed_servers()
+local server_table = {}
+
+for idx in pairs(installed_servers) do
+	local server = installed_servers[idx].name
+	table.insert(server_table, server)
+end
 
 local opts = {
 	on_attach = require("user.lsp.handlers").on_attach,
 	capabilities = require("user.lsp.handlers").capabilities,
 }
 
-for _, server in pairs(servers) do
+for _, server in pairs(server_table) do
 	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
 	if has_custom_opts then
 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
@@ -35,6 +43,18 @@ lspconfig.omnisharp.setup({
 	capabilities = require("user.lsp.handlers").capabilities,
 })
 
+lspconfig.ccls.setup({
+	cmd = { "ccls" },
+	filetypes = { "c", "cc", "cpp", "c++", "objc", "objcpp" },
+	rootPatterns = { ".ccls", ".ccls-cache", "compile_commands.json", ".git/", ".hg/" },
+	initializationOptions = {
+		cache = {
+			directory = "/tmp/ccls",
+		},
+	},
+	on_attach = require("user.lsp.handlers").on_attach,
+	capabilities = require("user.lsp.handlers").capabilities,
+})
 -- lspconfig.asm_lsp.setup({
 -- 	cmd = { "/home/bagheri/.cargo/bin/asm-lsp" },
 -- 	filetypes = {
