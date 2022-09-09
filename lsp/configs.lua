@@ -12,19 +12,14 @@ lsp_installer.setup({
 })
 
 local installed_servers = lsp_installer.get_installed_servers()
-local server_table = {}
-
-for idx in pairs(installed_servers) do
-	local server = installed_servers[idx].name
-	table.insert(server_table, server)
-end
 
 local opts = {
 	on_attach = require("user.lsp.handlers").on_attach,
 	capabilities = require("user.lsp.handlers").capabilities,
 }
 
-for _, server in pairs(server_table) do
+for idx in pairs(installed_servers) do
+	local server = installed_servers[idx].name
 	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
 	if has_custom_opts then
 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
@@ -34,7 +29,7 @@ end
 
 lspconfig.omnisharp.setup({
 	cmd = {
-		"/home/bagheri/.cache/omnisharp-vim/omnisharp-roslyn/run",
+		"~/.cache/omnisharp-vim/omnisharp-roslyn/run",
 		"--languageserver",
 		"--hostPID",
 		tostring(vim.fn.getpid()),
@@ -55,6 +50,7 @@ lspconfig.ccls.setup({
 	on_attach = require("user.lsp.handlers").on_attach,
 	capabilities = require("user.lsp.handlers").capabilities,
 })
+
 -- lspconfig.asm_lsp.setup({
 -- 	cmd = { "/home/bagheri/.cargo/bin/asm-lsp" },
 -- 	filetypes = {

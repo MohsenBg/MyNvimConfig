@@ -11,7 +11,7 @@ end
 require("luasnip/loaders/from_vscode").lazy_load()
 
 -- Load custom javascript
-require("luasnip/loaders/from_vscode").lazy_load({ paths = { "~/snippets/typescript" } })
+-- require("luasnip/loaders/from_vscode").lazy_load({ paths = { "~/snippets/typescript" } })
 
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
