@@ -38,18 +38,18 @@ lspconfig.omnisharp.setup({
 	capabilities = require("user.lsp.handlers").capabilities,
 })
 
-lspconfig.ccls.setup({
-	cmd = { "ccls" },
-	filetypes = { "c", "cc", "cpp", "c++", "objc", "objcpp" },
-	rootPatterns = { ".ccls", ".ccls-cache", "compile_commands.json", ".git/", ".hg/" },
-	initializationOptions = {
-		cache = {
-			directory = "/tmp/ccls",
-		},
-	},
-	on_attach = require("user.lsp.handlers").on_attach,
-	capabilities = require("user.lsp.handlers").capabilities,
-})
+--lspconfig.ccls.setup({
+-- 	cmd = { "ccls" },
+-- 	filetypes = { "c", "cc", "cpp", "c++", "objc", "objcpp" },
+-- 	rootPatterns = { ".ccls", ".ccls-cache", "compile_commands.json", ".git/", ".hg/" },
+--	initializationOptions = {
+--		cache = {
+--			directory = "/tmp/ccls",
+--		},
+--	},
+--	on_attach = require("user.lsp.handlers").on_attach,
+--	capabilities = require("user.lsp.handlers").capabilities,
+--})
 
 -- lspconfig.asm_lsp.setup({
 -- 	cmd = { "/home/bagheri/.cargo/bin/asm-lsp" },
@@ -81,3 +81,4 @@ vim.cmd("let g:tagbar_iconchars = ['  ', '  ']")
 -- vim.cmd("let g:closetag_shortcut = '>'")
 -- vim.cmd("let g:closetag_close_shortcut = '<leader>>'")
 -- vim.cmd("let g:closetag_enable_react_fragment = 1")
+

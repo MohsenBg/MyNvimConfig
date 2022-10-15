@@ -1,4 +1,5 @@
 local M = {}
+
 -- TODO: backfill this to template
 M.setup = function()
 	local signs = {

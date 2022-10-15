@@ -17,7 +17,7 @@ null_ls.setup({
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.rustfmt,
 		formatting.stylua,
-		formatting.csharpier.with({ extra_args = { "--fast" } }),
+		-- formatting.csharpier.with({ extra_args = { "--fast" } }),
 		formatting.clang_format,
 		-- diagnostics.flake8
 	},
