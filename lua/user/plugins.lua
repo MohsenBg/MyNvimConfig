@@ -99,14 +99,7 @@ return packer.startup(function(use)
   use({ "mattn/emmet-vim" })
 
   --markdown
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    setup = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
-  })
+  use({ "iamcco/markdown-preview.nvim" })
 
   -- multiple cursor
   use({ "terryma/vim-multiple-cursors" })
