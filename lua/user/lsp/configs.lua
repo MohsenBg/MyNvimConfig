@@ -29,7 +29,7 @@ end
 
 lspconfig.omnisharp.setup({
 	cmd = {
-		"~/.cache/omnisharp-vim/omnisharp-roslyn/run",
+		"/home/Bagheri/.cache/omnisharp-vim/omnisharp-roslyn/run",
 		"--languageserver",
 		"--hostPID",
 		tostring(vim.fn.getpid()),
@@ -38,6 +38,8 @@ lspconfig.omnisharp.setup({
 	capabilities = require("user.lsp.handlers").capabilities,
 })
 
+vim.cmd("let g:OmniSharp_server_stdio = 1")
+-- vim.cmd("let g:OmniSharp_server_use_mono = 1")
 --lspconfig.ccls.setup({
 -- 	cmd = { "ccls" },
 -- 	filetypes = { "c", "cc", "cpp", "c++", "objc", "objcpp" },
@@ -81,4 +83,3 @@ vim.cmd("let g:tagbar_iconchars = ['  ', '  ']")
 -- vim.cmd("let g:closetag_shortcut = '>'")
 -- vim.cmd("let g:closetag_close_shortcut = '<leader>>'")
 -- vim.cmd("let g:closetag_enable_react_fragment = 1")
-

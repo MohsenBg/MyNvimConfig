@@ -25,7 +25,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-
 -- Nvim_tree
 keymap("n", "<C-b>", ":NvimTreeFocus<cr>", opts)
 keymap("n", "<C-t>", ":NvimTreeToggle<cr>", opts)
@@ -40,7 +39,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<F8>", ":TagbarToggle <cr>", opts)
 keymap("n", "<F9>", ":TagbarOpen -fj <cr>", opts)
 
-
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
@@ -50,7 +48,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
