@@ -42,6 +42,8 @@ keymap("n", "<F9>", ":TagbarOpen -fj <cr>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-w>", ":bd | bn <CR>", opts)
+keymap("n", "<S-x>", ":%bd|e#<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)

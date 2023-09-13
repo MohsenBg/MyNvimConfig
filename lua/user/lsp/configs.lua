@@ -40,18 +40,20 @@ lspconfig.omnisharp.setup({
 
 vim.cmd("let g:OmniSharp_server_stdio = 1")
 -- vim.cmd("let g:OmniSharp_server_use_mono = 1")
---lspconfig.ccls.setup({
+
+-- lspconfig.ccls.setup({
 -- 	cmd = { "ccls" },
--- 	filetypes = { "c", "cc", "cpp", "c++", "objc", "objcpp" },
--- 	rootPatterns = { ".ccls", ".ccls-cache", "compile_commands.json", ".git/", ".hg/" },
---	initializationOptions = {
---		cache = {
---			directory = "/tmp/ccls",
---		},
---	},
---	on_attach = require("user.lsp.handlers").on_attach,
---	capabilities = require("user.lsp.handlers").capabilities,
---})
+-- 	autostart = true,
+-- 	filetypes = { ".c", ".cc", ".cpp", ".cxx", ".h", ".hh", ".hpp", ".hxx" },
+-- 	rootPatterns = { ".ccls", ".git", "compile_commands.json", ".vim/", ".emacs.d/", ".vscode/", ".idea/" },
+-- 	initializationOptions = {
+-- 		cache = {
+-- 			directory = "/tmp/ccls",
+-- 		},
+-- 	},
+-- 	on_attach = require("user.lsp.handlers").on_attach,
+-- 	capabilities = require("user.lsp.handlers").capabilities,
+-- })
 
 -- lspconfig.asm_lsp.setup({
 -- 	cmd = { "/home/bagheri/.cargo/bin/asm-lsp" },
