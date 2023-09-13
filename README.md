@@ -10,8 +10,9 @@ I use repo blew for starter config and change it and add some plugin <br/>
 
 ## Demo
 
-![Screenshot from 2022-08-02 21-15-12](https://user-images.githubusercontent.com/84536899/182431143-c346da21-8748-4455-8ec7-1484c5cd2e86.png)
-![Screenshot from 2022-08-02 21-17-52](https://user-images.githubusercontent.com/84536899/182431195-6266c0f9-bc67-4220-b713-fdd582535d05.png)
-![Screenshot from 2022-08-02 21-19-27](https://user-images.githubusercontent.com/84536899/182431209-81a27b43-5be7-4f53-9740-6d469f4e5616.png)
-![Screenshot from 2022-08-02 21-21-08](https://user-images.githubusercontent.com/84536899/182431248-8600eaba-67d9-4511-9270-1eb565380097.png)
-![Screenshot from 2022-08-02 21-18-12](https://user-images.githubusercontent.com/84536899/182431291-58bd3f43-c1ea-4836-847f-91169aa3a236.png)
+![1](https://user-images.githubusercontent.com/84536899/182431143-c346da21-8748-4455-8ec7-1484c5cd2e86.png)
+![2](https://user-images.githubusercontent.com/84536899/203401983-dce93b61-faba-45b2-acf6-d2f9bf8538e0.png)
+![3](https://user-images.githubusercontent.com/84536899/203401988-7d347265-4df8-41bb-b5f2-ee8f519475f0.png)
+![4](https://user-images.githubusercontent.com/84536899/203401994-960c4be9-f08d-467d-b8f7-34e546ea5bd1.png)
+![5](https://user-images.githubusercontent.com/84536899/203402005-5e1cd0af-510c-4cff-9ae9-b5f6b1e0bf4f.png)
+![6](https://user-images.githubusercontent.com/84536899/203402010-ee090ad0-5eb7-4194-8389-338b14d830cd.png)
